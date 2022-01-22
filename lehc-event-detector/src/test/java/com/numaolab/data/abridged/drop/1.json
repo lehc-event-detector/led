@@ -1,0 +1,19 @@
+{
+  "title": "Abridged-DROP: 2 -> 1",
+
+  "data": {
+    "logic": "DROP",
+    "k": 2,
+    "kd": 0,
+    "other": "00000",
+    "prevTags": [
+      {"igs": "0", "mbit": false, "rssi": -10.3, "phase": 0},
+      {"igs": "1", "mbit": false, "rssi": -10.3, "phase": 0}
+    ],
+    "currTags": [
+      {"igs": "0", "mbit": false, "rssi": -10.3, "phase": 0}
+    ]
+  },
+
+  "answer": false
+}

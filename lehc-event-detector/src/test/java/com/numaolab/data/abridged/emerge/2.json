@@ -1,0 +1,17 @@
+{
+  "title": "Abridged-EMERGE: 0 -> 1",
+
+  "data": {
+    "logic": "EMERGE",
+    "k": 2,
+    "kd": 0,
+    "other": "00000",
+    "prevTags": [
+    ],
+    "currTags": [
+      {"igs": "0", "mbit": false, "rssi": -10.3, "phase": 0}
+    ]
+  },
+
+  "answer": false
+}

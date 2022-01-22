@@ -1,0 +1,24 @@
+{
+  "title": "Abridged-CROSS: 2",
+
+  "data": {
+    "logic": "CROSS",
+    "k": 4,
+    "kd": 2,
+    "other": "00000",
+    "prevTags": [
+      {"igs": "0", "mbit": false, "rssi": -8.3, "phase": 0},
+      {"igs": "1", "mbit": false, "rssi": -12.6, "phase": 0},
+      {"igs": "2", "mbit": true, "rssi": -49.8, "phase": 0},
+      {"igs": "3", "mbit": true, "rssi": -50.3, "phase": 0}
+    ],
+    "currTags": [
+      {"igs": "0", "mbit": false, "rssi": -7.1, "phase": 0},
+      {"igs": "1", "mbit": false, "rssi": -9.3, "phase": 0},
+      {"igs": "2", "mbit": true, "rssi": -1.2, "phase": 0},
+      {"igs": "3", "mbit": true, "rssi": -3.2, "phase": 0}
+    ]
+  },
+
+  "answer": true
+}

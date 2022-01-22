@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+WORKDIR=/usr/src/lehc-archive
+PJROOT=$(cd $(dirname $0)/..; pwd)
+IMAGE=maven:3.8-openjdk-8-slim
+CMD="mvn clean package exec:java -Dexec.mainClass=org.apache.beam.examples.MQTTtoMongoDB -Pflink-runner -Dexec.args=\"--runner=FlinkRunner --MQTTHost=mosquitto --DBHost=mongo --DBName=lehc --colName=log --inputTopic=all --checkpointingInterval=1000 --flinkMaster=jobmanager:8081 --filesToStage=$WORKDIR/target/lehc-archive-bundled-0.1.jar\""
+NETWORK=lednet
+
+eval "docker run -it -w $WORKDIR -v maven-repo:/root/.m2 -v $PJROOT:$WORKDIR --net=$NETWORK --rm $IMAGE $CMD"

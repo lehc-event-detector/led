@@ -1,0 +1,24 @@
+{
+  "title": "Abridged-MERGE: 1",
+
+  "data": {
+    "logic": "DIVIDE",
+    "k": 4,
+    "kd": 2,
+    "other": "11110",
+    "prevTags": [
+      {"igs": "0", "mbit": false, "rssi": -80, "phase": 0},
+      {"igs": "1", "mbit": false, "rssi": -77, "phase": 0},
+      {"igs": "2", "mbit": true, "rssi": -10, "phase": 0},
+      {"igs": "3", "mbit": true, "rssi": -10, "phase": 0}
+    ],
+    "currTags": [
+      {"igs": "0", "mbit": false, "rssi": -90, "phase": 0},
+      {"igs": "1", "mbit": false, "rssi": -99, "phase": 0},
+      {"igs": "2", "mbit": true, "rssi": -20, "phase": 0},
+      {"igs": "3", "mbit": true, "rssi": -40, "phase": 0}
+    ]
+  },
+
+  "answer": false
+}

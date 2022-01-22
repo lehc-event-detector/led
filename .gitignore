@@ -1,0 +1,12 @@
+.vscode
+db
+target
+.apt_generated
+.apt_generated_tests
+redisinsight
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache

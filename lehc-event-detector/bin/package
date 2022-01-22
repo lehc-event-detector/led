@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+WORKDIR=/usr/src/lehc-event-detector
+PJROOT=$(cd $(dirname $0)/..; pwd)
+IMAGE=maven:3.8-openjdk-8-slim
+CMD="mvn clean package -DskipTests=true -Pflink-runner"
+
+docker run -it -w $WORKDIR -v maven-repo:/root/.m2 -v $PJROOT:$WORKDIR --rm $IMAGE $CMD

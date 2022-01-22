@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+WORKDIR=/usr/src/lehc-event-detector
+PJROOT=$(cd $(dirname $0)/..; pwd)
+IMAGE=maven:3.8-openjdk-8-slim
+CMD="mvn clean package exec:java -DskipTests=true -Dexec.mainClass=com.numaolab.Main -Pflink-runner -Dexec.args=\"--runner=FlinkRunner --streaming=true --inputUrl=mosquitto:1883:all --archiveUrl=root:example@mongo:27017:lehc:log --outputUrl=root:example@mongo:27017:lehc:result --header=00000010 --env=00000001 --type=$1 --isLogging=false --checkpointingInterval=100 --flinkMaster=jobmanager:8081 --fasterCopy=false --checkpointingMode=AT_LEAST_ONCE --failOnCheckpointingErrors=true --numConcurrentCheckpoints=3 --filesToStage=$WORKDIR/target/lehc-event-detector-bundled-1.0.jar\""
+NETWORK=lednet
+
+# --parallelism=4
+
+eval "docker run -it -w $WORKDIR -v maven-repo:/root/.m2 -v $PJROOT:$WORKDIR --net=$NETWORK --rm $IMAGE $CMD"
